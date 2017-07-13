@@ -1,0 +1,11 @@
+{
+    "mmt":[
+        { "from":"Pune", "to":"Mumbai","time":["08:09","10:19","11:00"],"fare":1000},
+         { "from":"Mumbai", "to":"Pune","time":["05:09","07:19"] ,"fare":900},
+        { "from":"Indore", "to":"Mumbai","time":["01:09","11:19"] ,"fare":2000},
+          { "from":"Pune", "to":"Indore","time":["01:09","11:19"] ,"fare":3000},
+           { "from":"Indore", "to":"Pune","time":["01:09","11:19"] ,"fare":5000},
+        { "from":"Mumbai", "to":"Indore","time":["04:09","08:19"] ,"fare":1500}
+       
+    ]
+}

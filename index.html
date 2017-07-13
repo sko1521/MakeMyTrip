@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Red Bird</title>
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+ <script src="js/jsPDF.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="nav" id="logo">
+        <span class="service"> <img src="img/Services_logo.png"></span>
+        <h1 class="slogan">The wings of India.</h1>
+        <a href="index.html"><img src="img/home.png" id="home" class="homeIcon"></a>
+    </nav>
+    <div class="wrapper">
+        <div class="data">
+            <div class="frm" id="formData">
+                <form action="#" id="searchForm" method="post">
+                    <div class="travelway">
+                        <label>OnweWay: </label><input type="radio" id="single" checked="checked" name="way" value="oneway">
+                        <label>Round-trip:</label><input type="radio" id="double" name="way" value="roundtrip">
+                    </div>
+                    <div class="from">
+                        <h3 class="common">From</h3>
+                        <input id="frm" class="city1 txt" list="src" autocomplete="off" type="text">
+                        <datalist id="src">
+                            <option>Select source</option>
+                        </datalist>
+                        <span id="errFrom"></span>
+                    </div>
+                    <div class="to">
+                        <h3 class="common">To</h3>
+                        <input id="to" class="city2 txt" autocomplete="off" list="dest" type="text">
+                        <datalist id="dest">
+                            <option>Select Destination</option>
+                        </datalist>
+                        <span id="errTo"></span>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="date">
+                        <div class="depart">
+                            <h3 class="common">Depart</h3>
+                            <input id="depart" name="Text" value="" class="txt" type="text" readonly="readonly">
+                        </div>
+                        <div class="return" id="rDate">
+                            <h3 class="common">Return</h3>
+                            <input id="return" name="Text" value="" type="text" class="txt" readonly="readonly" disabled>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                    <input value="Search Flights" id="submitForm" class="sbmt" type="submit"><span id="errFlight" class="err"></span>
+                </form>
+            </div>
+        </div>
+        <div id="result" class="resultData">
+
+        </div>
+        <div class="container hideDiv" id="uInfo">
+            <h2 class="userHeading">Enter your details</h2>
+            <form class="contact" id="userForm" method="post">
+                <fieldset>
+                    <input placeholder="Your name" id="nm" type="text" autocomplete="off">
+                    <span id="errorArea"></span>
+                </fieldset>
+                <fieldset>
+                    <input placeholder="Your Email Address" autocomplete="off" type="text" id="em">
+                </fieldset>
+                <fieldset>
+                    <input placeholder="Your Phone Number" type="text" autocomplete="off" id="no">
+                </fieldset>
+                <fieldset class="rdo">
+                    <input type="radio" value="male" name="gen" id="genderM" checked="checked">Male
+                    <input type="radio" value="female" id="genderF" name="gen">Female
+                </fieldset>
+                <fieldset>
+                    <button name="submit" type="submit" class="contact-submit">Submit</button>
+                    <span id="errEmpty"></span>
+                </fieldset>
+            </form> 
+        </div>
+    </div>
+      <div id="ticketGen" class="ticketDetails hideDiv">
+          <span class="departJourneySpan">Departure</span>
+             <div id="rData" class="ticket"> </div>
+            <label ><span class="userDetailsContent">Name:</span><span id="name" class="myData"></span></label>
+            <label><span  class="userDetailsContent"> Contact:</span><span id="num" class="myData"></span></label>
+            <label><span  class="userDetailsContent">Gender:</span><span id="uGen" class="myData"></span></label>
+            <img src="img/ticktLogo.png" class="ticketLogo">
+            <p id="totalFare" class="fareCost"></p>
+        </div>
+    <footer class="ftr">
+        <p class="logo">Red Bird</p>
+        <p class="ftrTxt">&copy; 2017 All rights reserved. <a href="#" class="ancr2">Red Bird</a></p>
+    </footer>
+    <script src="js/script.js" type="text/javascript"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js" type="text/javascript"></script>
+</body>
+
+</html>
